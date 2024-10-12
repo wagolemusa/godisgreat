@@ -15,8 +15,8 @@
 
 const nextConfig = {
     env: {
-        ENVIRONMENT_URL: "http://localhost:3000",
-        NEXTAUTH_URL: "http://localhost:3000",
+        ENVIRONMENT_URL: "https://godisgreat-f799547c5083.herokuapp.com",
+        NEXTAUTH_URL: "https://godisgreat-f799547c5083.herokuapp.com",
         DB_URL: "mongodb+srv://homiemusa:djrefuge@cluster0.fk517ja.mongodb.net/npcdatabase?retryWrites=true&w=majority", 
         CLOUND_NAME:"xycoders",
         CLOUDINARY_API_KEY: "837887428819121",
