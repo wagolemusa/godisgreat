@@ -23,6 +23,7 @@ const OrdersAll = ({ orders }) => {
 
         <Suspense className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <h1 className="text-3xl my-5 ml-4 font-bold">{orders?.ordersCount} Orders</h1>
+            <a href="/admin/orders" className="btn btn-success">Today Orders</a>&apos; &apos;
             <a href="/admin/orders/shippingToday" className="btn btn-primary">Shipped Orders</a>&apos; &apos;
               {/* <a href="/admin/orders/todayorder" className="btn btn-success">today&apos;s orders</a>&apos; &apos; */}
               <a href="/admin/orders/shippingAll" className="btn btn-info">All shipped Orders</a>&apos; &apos;

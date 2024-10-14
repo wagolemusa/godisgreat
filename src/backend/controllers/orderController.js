@@ -34,26 +34,36 @@ export const getOrdersToday = async (req, res) => {
   try {
     const resPerPage = 100;
 
-    // Get today's date range
-    const startOfDay = moment().startOf('day').toDate();
-    const endOfDay = moment().endOf('day').toDate();
+    // Get today's date range using date-fns
+    const startOfToday = startOfDay(new Date());
+    const endOfToday = endOfDay(new Date());
 
-    // Count documents with today's date and status 'shipped'
+    // Debugging logs
+    console.log('Start of Today:', startOfToday);
+    console.log('End of Today:', endOfToday);
+
+    // Count documents with today's date and status 'Processing'
     const ordersCount = await Order.countDocuments({
-      createAt: { $gte: startOfDay, $lte: endOfDay },
+      createAt: { $gte: startOfToday, $lte: endOfToday },
       orderStatus: 'Shipped'
     });
 
+    // Debugging logs
+    console.log('Orders Count:', ordersCount);
+
     // Create the API filters with pagination
     const apiFilters = new APIFilters(Order.find({
-      createAt: { $gte: startOfDay, $lte: endOfDay },
+      createAt: { $gte: startOfToday, $lte: endOfToday },
       orderStatus: 'Shipped'
     }), req.query).pagination(resPerPage);
 
     // Execute the query with populated fields
     const orders = await apiFilters.query.find()
       .populate('shippingInfo user')
-      .sort({createAt: -1})
+      .sort({ createAt: -1 });
+
+    // Debugging logs
+    console.log('Orders:', orders);
 
     // Return the response
     res.status(200).json({
@@ -67,7 +77,6 @@ export const getOrdersToday = async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
-
 
 // today proccing orders for today
 export const getOrderProcessing = async (req, res) => {

@@ -26,6 +26,7 @@ const ShippedData = ({ orders }) => {
  
             <Suspense className="relative overflow-x-auto shadow-md sm:rounded-lg">
               <h1 className="text-3xl my-5 ml-4 font-bold">{orders?.ordersCount} Today &apos; s Shipped Orders. </h1>
+              <a href="/admin/orders" className="btn btn-success">Today Orders</a>&apos; &apos;
               <a href="/admin/orders/shippingToday" className="btn btn-primary">Shipped Orders</a>&apos; &apos;
               {/* <a href="/admin/orders/todayorder" className="btn btn-success">today&apos;s orders</a>&apos; &apos; */}
               <a href="/admin/orders/AllshippedData" className="btn btn-info">All shipped Orders</a>&apos; &apos;
@@ -51,7 +52,7 @@ const ShippedData = ({ orders }) => {
                   {orders?.orders?.map((order) =>(
                     
                     <tr key={order._id} className="bg-white">
-                      <td className="px-6 py-2">{formatDate(order?.createdAt)}</td>
+                      <td className="px-6 py-2">{formatDate(order?.createAt)}</td>
                     <td className="px-6 py-2">UGX {order?.totalAmount}</td>
                     <td className="px-6 py-2">{order?.orderStatus}</td>
                     <td className="px-6 py-2">

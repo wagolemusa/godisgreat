@@ -118,7 +118,7 @@ export const getUsers = async (req, res) => {
   const apiFilters = new APIFilters(User.find(), req.query).pagination(
     resPerPage
   );
-  const users = await apiFilters.query
+  const users = await apiFilters.query.sort({name: 1})
 
   res.status(200).json({
     userCount,

@@ -12,11 +12,12 @@ const Referal = () => {
                 </div>
                 <div className="point-3 col-md-6">
                     <h2>This is your Referral code</h2>
-                    <br/><br/>
-                    <button className="pointButton">Readmore about our Referral Program</button>
+                    <br/>
+                    <button className="pointButton">Readmore  Referral Program</button>
                 </div>
             </div>
             </div>
+        
         </section>
     )
 }

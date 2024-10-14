@@ -14,7 +14,9 @@ const Home = () => {
            <Cardslide />
           <br/>  
           <FullsetGas />
+          <br/>
           <Cylinder12kgs/>
+    
             <Gascooker />
             <br/>  <br/>
           

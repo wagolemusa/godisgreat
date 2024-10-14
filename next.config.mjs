@@ -12,12 +12,13 @@
 //         disableDevLogs: true,
 //     }
 // };
-
+// https://godisgreatgas.com
+// DB_URL: "mongodb+srv://homiemusa:djrefuge@cluster0.fk517ja.mongodb.net/npcdatabase?retryWrites=true&w=majority", 
 const nextConfig = {
     env: {
-        ENVIRONMENT_URL: "https://godisgreatgas.com",
-        NEXTAUTH_URL: "https://godisgreatgas.com",
-        DB_URL: "mongodb+srv://homiemusa:djrefuge@cluster0.fk517ja.mongodb.net/npcdatabase?retryWrites=true&w=majority", 
+        ENVIRONMENT_URL: "http://localhost:3000",
+        NEXTAUTH_URL: "http://localhost:3000",
+        DB_URL:"mongodb+srv://homiemusa:djrefuge@cluster0.mcttt.mongodb.net/godisgreatgas?retryWrites=true&w=majority",
         CLOUND_NAME:"xycoders",
         CLOUDINARY_API_KEY: "837887428819121",
         CLOUDINARY_API_SECRET: "fxqLgjYaglPh0PViyCbB-cseWoE",
