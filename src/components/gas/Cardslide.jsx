@@ -81,7 +81,7 @@ const Cardslide = () => {
             <SwiperSlide key={gas6kg._id}>
               <div className="product-card">
                 <div className="cylinder6kgs">
-                  <div className="cyrefill">UGX {gas6kg?.price}</div>
+                  <div className="cyrefill">UGX {gas6kg?.discount}</div>
                   <button className="btnStep1" onClick={() => addToCartHandler(gas6kg)}>Add To Cart</button>
                 </div>
 

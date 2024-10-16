@@ -50,7 +50,7 @@ const router = useRouter();
       addItemToCart({
         product: product._id,
         name: product.name,
-        price: product.price,
+        price: product.discount,
         image: product.images[0].url,
         stock: product.stock,
         seller: product.seller,
@@ -117,7 +117,7 @@ const router = useRouter();
               <div className="product-card12">
               
                     <div className="cylinder6kgs">
-                    <div className="cyrefill">UGX {gas6kg?.price}</div>
+                    <div className="cyrefill">UGX {gas6kg?.discount}</div>
                     <button className="btnStep1" onClick={() => addToCartHandler(gas6kg)}>Add To Cart</button>
                   </div>
             
@@ -140,7 +140,7 @@ const router = useRouter();
                   
                   <div class="pt-2 pb-10">
                     <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2  line-through">UGX {gas6kg?.price}</span>
-                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2  ">{gas6kg?.category}</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2  ">{gas6kg?.discount}</span>
                   </div>
                   </Link>
                 </div>

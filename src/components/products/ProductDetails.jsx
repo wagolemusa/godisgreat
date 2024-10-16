@@ -43,7 +43,7 @@ const ProductDetails = ({ product }) => {
       addItemToCart({
         product: product._id,
         name: product.name,
-        price: product.price,
+        price: product.discount,
         image: product.images[0].url,
         stock: product.stock,
         seller: product.seller,
@@ -100,7 +100,7 @@ const ProductDetails = ({ product }) => {
                 </li>
               </ul>
 
-              <p className="mb-4 font-semibold text-xl">UGX {product?.price}</p>
+              <p className="mb-4 font-semibold text-xl">UGX {product?.discount}</p>
 
               <p className="mb-4 text-gray-500">{product?.description}</p>
 

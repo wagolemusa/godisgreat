@@ -103,7 +103,7 @@ export const querythreeProduct = async(req, res, next) => {
 
 // query all Gas Cookers
 export const queryGasCooker = async(req, res) =>{
-    const gasCooker = await Product.find({ category: {$in: ["Gas Cookers", "Electric cookers"]}});
+    const gasCooker = await Product.find({ category: {$in: ["Gas Cookers", "Oven Cookers"]}});
     return res.status(201).json({
         gasCooker
     })
@@ -120,7 +120,7 @@ export const queryfullSet12kgs = async(req, res) =>{
 
 // query all Gas Cookers
 export const querybanners = async(req, res) =>{
-    const gasBanner = await Product.find({ category: {$in: ["Regulator", "Banners", "Horse pipe", "Grills"]}});
+    const gasBanner = await Product.find({ category: {$in: ["Regulators", "Banners", "Hose Pipe", "Grills"]}});
     return res.status(201).json({
         gasBanner
     })
